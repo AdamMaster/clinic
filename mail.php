@@ -1,14 +1,29 @@
 <?php
 
-$name = trim($_POST["name"]) ?? '';
-$phone = trim($_POST["phone"]) ?? '';
-$filller = trim($_POST["filller"]) ?? '';
-$date = trim($_POST["date"]) ?? '';
-
 $to = 'lampezhev86@gmail.com';
 $subject = 'Новое сообщение с сайта';
-$body = "Имя: $name \nТелефон: $phone \nEmail: $email \nФиллерilller: $filller \nДата: $date";
-$headers = "From: $email";
+
+// Сбор всех полей, которые пришли в POST
+$fields = [
+  'Имя' => $_POST['name'] ?? '',
+  'Телефон' => $_POST['phone'] ?? '',
+  'Email' => $_POST['email'] ?? '',
+  'Филлер' => $_POST['filller'] ?? '',
+  'Тип капельницы' => $_POST['iv'] ?? '',
+  'Дата' => $_POST['date'] ?? '',
+  'Сообщение' => $_POST['message'] ?? '',
+  // Добавь сюда любые другие возможные поля
+];
+
+$body = '';
+foreach ($fields as $label => $value) {
+  if (!empty(trim($value))) {
+    $body .= "$label: " . trim($value) . "\n";
+  }
+}
+
+$from = $_POST['email'] ?? 'noreply@example.com';
+$headers = "From: $from";
 
 if (mail($to, $subject, $body, $headers)) {
   echo 'Сообщение отправлено!';

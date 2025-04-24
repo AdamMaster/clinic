@@ -115,7 +115,6 @@ forms.forEach(form => {
 	form.addEventListener('submit', async function (e) {
 		e.preventDefault()
 
-
 		const isAllInputsValid = Array.from(inputsRequired).every(input => input.classList.contains('valid'))
 
 		if (isAllInputsValid) {
@@ -126,10 +125,19 @@ forms.forEach(form => {
 					body: formData
 				})
 
-				const result = await response.text(); // или response.json() если ты возвращаешь JSON
-				console.log(result);
+				const result = await response.text()
+
+				if (response.ok) {
+					console.log(result);
+
+					alert('Спасибо! Форма отправлена.');
+					form.reset();
+					inputsRequired.forEach(input => input.classList.remove('valid'));
+				} else {
+					alert('Ошибка отправки. Попробуйте позже.');
+				}
 			} catch (error) {
-				console.error('Ошибка:', error);
+				console.error('Ошибка:', error)
 			}
 		} else {
 			inputsRequired.forEach(input => {
