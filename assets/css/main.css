@@ -1083,6 +1083,26 @@ b {
   color: #fff;
 }
 
+.air-datepicker-body--day-name {
+  color: var(--c-brown);
+}
+.air-datepicker-cell.-current- {
+  background: var(--c-brown-light);
+  color: #000;
+}
+.air-datepicker-cell.-focus- {
+  background: var(--c-brown-light);
+}
+.air-datepicker-cell.-selected- {
+  background: var(--c-brown);
+}
+.air-datepicker-cell.-selected-.-focus- {
+  background: var(--c-brown);
+}
+.air-datepicker-cell.-selected-.-current- {
+  background: var(--c-brown);
+}
+
 /* Адаптив */
 @media (max-width: 1199px) {
   .header-top-inner {

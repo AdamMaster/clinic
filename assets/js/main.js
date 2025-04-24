@@ -70,7 +70,9 @@ const combobox = () => {
 }
 combobox()
 
-new AirDatepicker('.date-picker')
+new AirDatepicker('.date-picker', {
+	isMobile: window.innerWidth <= 575 && true,
+})
 
 const forms = document.querySelectorAll('.form')
 
