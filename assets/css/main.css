@@ -15,7 +15,7 @@ body {
   min-height: 100dvh;
   padding: 0;
   margin: 0;
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -110,6 +110,8 @@ input:focus {
   z-index: 100;
 }
 .header-top {
+  position: relative;
+  z-index: 100;
   background: var(--c-brown);
   color: #fff;
 }
@@ -135,7 +137,7 @@ input:focus {
 .contacts-list {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 8px;
 }
 .contacts-item {
   display: flex;
@@ -178,6 +180,16 @@ input:focus {
   background: #e1d3b9;
 }
 .header-bottom {
+  position: relative;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+.header-bottom.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
 }
 .header-bottom-inner {
 }
@@ -207,10 +219,13 @@ input:focus {
   color: #fff;
 }
 .mobile-menu-head {
+  position: relative;
+  z-index: 100;
   display: flex;
   align-items: center;
   gap: 20px;
   padding: 14px 0;
+  background: var(--c-brown-dark);
 }
 .mobile-menu-title {
   flex-grow: 1;
@@ -218,6 +233,8 @@ input:focus {
 .mobile-menu-list-wrapper {
   display: none;
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 99;
   translate: 0 -100%;
   width: 100%;
@@ -536,6 +553,7 @@ input:focus {
 }
 .variety {
   margin-bottom: 80px;
+  scroll-margin-top: 50px;
 }
 .variety-title {
   margin-bottom: 35px;
@@ -634,6 +652,7 @@ input:focus {
   padding: 0 15px;
   background: #ffffff9a;
   border-radius: 7px;
+  color: #000;
 }
 .social-button svg {
   width: 25px;
@@ -717,6 +736,7 @@ b {
 
 .popular {
   margin-bottom: 80px;
+  scroll-margin-top: 50px;
 }
 .popular-inner {
   display: grid;
@@ -954,6 +974,7 @@ b {
 
 .preparation {
   margin-bottom: 110px;
+  scroll-margin-top: 50px;
 }
 .preparation-inner {
   display: grid;

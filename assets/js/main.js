@@ -1,24 +1,56 @@
 const changeOpenMobileMenu = () => {
 	const button = document.querySelector('.burger')
 	const header = document.querySelector('.header')
+	const headerBottom = document.querySelector('.header-bottom ')
 	const menuWrapper = document.querySelector('.mobile-menu-list-wrapper')
-	const menu = document.querySelector('.mobile-menu')
+	const menuLinks = document.querySelectorAll('.mobile-menu-link')
 
-	menuWrapper.style.top = `${header.clientHeight}px`
+	menuWrapper.style.top = `${headerBottom.clientHeight}px`
+
+	const setOpen = () => {
+		button.classList.add('active')
+		menuWrapper.style.translate = `0`
+		document.documentElement.style.scrollbarGutter = 'stable'
+		document.body.style.overflow = 'hidden'
+	}
+	const setClose = () => {
+		button.classList.remove('active')
+		menuWrapper.style.translate = `0 -100%`
+		document.documentElement.style.scrollbarGutter = ''
+		document.body.style.overflow = ''
+	}
 
 	const onClickButton = () => {
 		if (!button.classList.contains('active')) {
-			button.classList.add('active')
-			menuWrapper.style.translate = `0`
+			setOpen()
 		} else {
-			button.classList.remove('active')
-			menuWrapper.style.translate = `0 -100%`
+			setClose()
 		}
 	}
 
 	button.addEventListener('click', onClickButton)
+
+	menuLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			setClose()
+		})
+	})
 }
 changeOpenMobileMenu()
+
+const stickyMenu = () => {
+	const menuTop = document.querySelector('.header-top')
+	const menuBottom = document.querySelector('.header-bottom')
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > menuTop.clientHeight) {
+			menuBottom.classList.add('sticky')
+		} else {
+			menuBottom.classList.remove('sticky')
+		}
+	})
+}
+stickyMenu()
 
 const combobox = () => {
 	const parentEls = document.querySelectorAll('.combobox')
