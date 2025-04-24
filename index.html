@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<title>Vogue Clinic</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="header-top-inner">
+					<div class="logo-wrapper">
+						<img class="logo" src="assets/images/logo.svg" alt="logo" />
+					</div>
+					<div class="header-contacts contacts">
+						<div class="contacts-list">
+							<div class="contacts-item">Ежедневно 9.00-20.00</div>
+							<div class="contacts-item">Невский проспект, 19</div>
+						</div>
+						<div class="contacts-list">
+							<a class="contacts-item contacts-link" href="tel:+73452606698">
+								<svg class="contacts-link-icon">
+									<use xlink:href="assets/images/icons/icons.svg#telephone"></use>
+								</svg>
+								+7 (3452) 60-66-98
+							</a>
+							<a class="contacts-item contacts-link" href="tel:+79292696698">
+								<svg class="contacts-link-icon">
+									<use xlink:href="assets/images/icons/icons.svg#calling"></use>
+								</svg>
+								+7 (929) 269-66-98
+							</a>
+						</div>
+					</div>
+					<div class="header-socials socials">
+						<a class="socials-link" href="https://wa.me/номерБезПлюса" target="_blank">
+							<img class="socials-icon" src="assets/images/whatsapp.svg" alt="whatsapp" />
+						</a>
+						<a class="socials-link" href="https://t.me/имяПользователя" target="_blank">
+							<img class="socials-icon" src="assets/images/telegram.svg" alt="telegram" />
+						</a>
+						<a class="socials-link" href="https://vk.com/имяПользователя" target="_blank">
+							<img class="socials-icon" src="assets/images/vk.svg" alt="vk" />
+						</a>
+					</div>
+					<button class="header-button button">Заказать звонок</button>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<div class="container">
+				<div class="header-bottom-inner">
+					<nav class="header-menu menu">
+						<ul class="menu-list">
+							<li class="menu-item"><a class="menu-link" href="#">Процедура</a></li>
+							<li class="menu-item"><a class="menu-link" href="#">Наши работы</a></li>
+							<li class="menu-item"><a class="menu-link" href="#">Преимущества</a></li>
+							<li class="menu-item"><a class="menu-link" href="#">Особенности</a></li>
+							<li class="menu-item"><a class="menu-link" href="#">Цены</a></li>
+							<li class="menu-item"><a class="menu-link" href="#">Специалисты</a></li>
+							<li class="menu-item"><a class="menu-link" href="#">Противопоказания</a></li>
+						</ul>
+					</nav>
+					<nav class="mobile-menu">
+						<div class="mobile-menu-head">
+							<div class="mobile-menu-title">Меню</div>
+							<ul class="mobile-menu-icons">
+								<li class="mobile-menu-icons-item">
+									<a class="mobile-menu-icons-link" href="tel:+73452606698">
+										<svg class="mobile-menu-icons-link-icon">
+											<use xlink:href="assets/images/icons/icons.svg#calling"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="mobile-menu-icons-item">
+									<a class="mobile-menu-icons-link" href="mailto:example@example.com">
+										<svg class="mobile-menu-icons-link-icon">
+											<use xlink:href="assets/images/icons/icons.svg#email"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+							<button class="burger">
+								<span class="burger-item"></span>
+								<span class="burger-item"></span>
+								<span class="burger-item"></span>
+							</button>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="mobile-menu-list-wrapper">
+		<div class="container">
+			<ul class="mobile-menu-list">
+				<li class="mobile-menu-item"><a class="mobile-menu-link" href="#">Процедура</a></li>
+				<li class="mobile-menu-item"><a class="mobile-menu-link" href="#">Наши работы</a></li>
+				<li class="mobile-menu-item"><a class="mobile-menu-link" href="#">Преимущества</a></li>
+				<li class="mobile-menu-item"><a class="mobile-menu-link" href="#">Особенности</a></li>
+				<li class="mobile-menu-item"><a class="mobile-menu-link" href="#">Цены</a></li>
+				<li class="mobile-menu-item"><a class="mobile-menu-link" href="#">Специалисты</a></li>
+				<li class="mobile-menu-item"><a class="mobile-menu-link" href="#">Противопоказания</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<main class="main">
+		<section class="promo" id="promo">
+			<img class="promo-img" src="assets/images/promo-img.jpg" alt="">
+			<div class="container">
+				<div class="promo-inner">
+					<div class="promo-content">
+						<h1 class="promo-title">
+							Установка внутриматочной спирали в Санкт-Петербурге <br />
+							<span>от 20 500 ₽</span>
+						</h1>
+						<p class="promo-text">
+							Установка внутриматочной спирали (ВМС) – современный, эффективный метод предотвращения нежелательной
+							беременности. С учетом типа спирали действие сохраняется 3-5 лет, эффективность метода составляет не менее
+							98%. Гинекологи клиники «Балтмед» устанавливают ВМС в амбулаторных условиях после предварительного
+							обследования.
+						</p>
+						<button class="promo-button button" data-modal="modal-feedback">Получить консультацию</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="advantages" id="advantages">
+			<div class="container">
+				<div class="advantages-inner">
+					<div class="advantages-items">
+						<div class="advantages-item">
+							<h3 class="advantages-item-title">
+								Высокая эффективность
+							</h3>
+							<p class="advantages-item-text">
+								Эффективны на 99%
+							</p>
+						</div>
+						<div class="advantages-item">
+							<h3 class="advantages-item-title">
+								Удобно в применении
+							</h3>
+							<p class="advantages-item-text">
+								Не нужно помнить про ежедневный прием таблеток по схеме
+							</p>
+						</div>
+						<div class="advantages-item">
+							<h3 class="advantages-item-title">
+								Длительный срок
+							</h3>
+							<p class="advantages-item-text">
+								Устанавливается сроком до пяти лет и эффективна в течение всего периода
+							</p>
+						</div>
+						<div class="advantages-item">
+							<h3 class="advantages-item-title">
+								Лечебный эффект
+							</h3>
+							<p class="advantages-item-text">
+								Может оказывать лечебный эффект при миомах матки и эндометриозе
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="variety" id="variety">
+			<div class="container">
+				<div class="variety-inner">
+					<h2 class="variety-title">
+						Разновидность ВМС и принцип их действия
+					</h2>
+					<div class="variety-text">
+						<p>
+							Установка ВМС – гинекологическая процедура, которая заключается во введении в полость матки изделия с
+							контрацептивным эффектом преимущественно в виде спирали, реже кольца или Т-образной формы.
+							Основной принцип действия – торможение сперматозоидов, которые направляются в полость матки. Контрацептив
+							изменяет свойства слизи, которая находится в цервикальном канале – слизистая пробка становится вязкой, что
+							препятствует продвижению сперматозоидов.
+						</p>
+						<p>
+							<b>
+								Спираль может сокращать продолжительность жизни яйцеклетки, в случае ее оплодотворения не дать ей
+								прикрепиться к стенкам маточной трубы. С учетом состава внутриматочные контрацептивы бывают двух видов:
+							</b>
+						</p>
+						<p>
+							<span class="highlight"><b>Медьсодержащие.</b></span> Имеют Т-образную форму, где все элементы обмотаны
+							медной
+							проволокой. Введенный контрацептив не дает полости матки смыкаться, а медь вызывает незначительное местное
+							воспаление, из-за чего сперматозоиды теряют способность к оплодотворению. <br>
+							<span class="highlight"><b>Гормональные.</b></span> Содержат гормон прогестин, который
+							препятствует зачатию. Он подавляет функционирование яичников и не дает зафиксироваться яйцеклетке в
+							эндометрии.
+						</p>
+						<p>
+							Женщины, которые используют данный вид контрацепции, должны помнить, что он может защищать только от
+							нежелательной беременности, а не от половых инфекций.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="price" id="price">
+			<div class="container">
+				<div class="price-inner">
+					<h2 class="price-title">Стоимость</h2>
+					<div class="price-table table">
+						<div class="table-head">
+							<div class="table-row">
+								<div class="table-ceil"><b>Услуга</b></div>
+								<div class="table-ceil"><b>Цена</b></div>
+							</div>
+						</div>
+						<div class="table-body">
+							<div class="table-row">
+								<div class="table-ceil">Первичный приём гинеколога</div>
+								<div class="table-ceil"><b>1 300р</b></div>
+							</div>
+							<div class="table-row">
+								<div class="table-ceil">Повторный приём гинеколога</div>
+								<div class="table-ceil"><b>1 200р</b></div>
+							</div>
+							<div class="table-row">
+								<div class="table-ceil">УЗИ малого таза у женщин (полость матки, яичники)</div>
+								<div class="table-ceil"><b>2 000р</b></div>
+							</div>
+							<div class="table-row">
+								<div class="table-ceil">Установка внутриматочной спирали c УЗИ контролем</div>
+								<div class="table-ceil"><b>5 360р</b></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="callback" id="callback">
+			<div class="container">
+				<div class="callback-inner">
+					<img class="callback-img" src="assets/images/woman.png" alt="woman">
+					<div class="callback-content">
+						<h2 class="callback-title">Хотите, мы вам перезвоним?</h2>
+						<div class="subtitle">
+							Оставьте заявку и мы подробно <br> ответим на все Ваши вопросы!
+						</div>
+						<form class="callback-form form">
+							<div class="field">
+								<input class="input required" type="text" name="name" placeholder="Иван Иванов">
+							</div>
+							<div class="field">
+								<input class="input required input-phone" type="tel" name="phone" placeholder="+7 (900) 123-45-67">
+							</div>
+							<button class="callback-from-button button">Отправить заявку</button>
+						</form>
+						<div class="subtitle">
+							Оставьте заявку и мы подробно ответим на все Ваши вопросы!
+						</div>
+						<div class="social-buttons">
+							<button class="social-button">
+								Написать в WhatsApp
+								<svg class="contacts-link-icon">
+									<use xlink:href="assets/images/icons/icons.svg#whatsapp"></use>
+								</svg>
+							</button>
+							<button class="social-button">
+								Написать в Telegram
+								<svg class="contacts-link-icon">
+									<use xlink:href="assets/images/icons/icons.svg#telegram"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="advantage-bmc" id="advantage-bmc">
+			<div class="advantage-bmc-top">
+				<img class="advantage-bmc-img" src="assets/images/bmc.jpg" alt="">
+				<div class="container">
+					<div class="advantage-bmc-inner">
+						<h2 class="advantage-bmc-title">Преимущества ВМС</h2>
+						<ul class="advantage-bmc-list list">
+							<li class="advantage-bmc-item list-item">
+								высокая надежность. Действие начинается практически сразу после установки, дополнительные методы
+								предохранения не нужны;
+							</li>
+							<li class="advantage-bmc-item list-item">
+								быстрое восстановление фертильности после удаления ВМС
+							</li>
+							<li class="advantage-bmc-item list-item">
+								долгосрочность использования – в среднем 5 лет, после чего необходима повторная установка;
+							</li>
+							<li class="advantage-bmc-item list-item">
+								нет дискомфорта и болезненности при половом контакте;
+							</li>
+							<li class="advantage-bmc-item list-item">
+								доступная цена установки внутриматочной спирали
+							</li>
+							<li class="advantage-bmc-item list-item">
+								не доставляют дискомфорта;
+							</li>
+							<li class="advantage-bmc-item list-item">
+								большое количество разновидностей ВМС, что дает возможность подобрать оптимальный вариант для конкретной
+								пациентки
+							</li>
+							<li class="advantage-bmc-item list-item">
+								можно использовать в период лактации;
+							</li>
+							<li class="advantage-bmc-item list-item">
+								нейтральное воздействие на углеводный, жировой обмен, что важно для пациенток с ожирением
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="advantage-bmc-bottom">
+				<div class="container">
+					<div class="advantage-bmc-bottom-inner">
+						<p class="advantage-bmc-warn">
+							<b>ВНИМАНИЕ! ВМС не защищают от венерических заболеваний.</b> Из недостатков – возможное увеличение
+							длительности менструации и обильности  кровотечений. При несоблюдении правил гигиены повышается риск
+							развития
+							заболеваний половых органов.
+						</p>
+						<button class="advantage-bmc-button button" data-modal="modal-feedback">Получить консультацию</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="popular" id="popular">
+			<div class="container">
+				<div class="popular-inner">
+					<div class="popular-left">
+						<h2 class="popular-title">Популярные вопросы</h2>
+						<img class="popular-img" src="assets/images/mirena.jpg" alt="mirena">
+					</div>
+					<div class="popular-right">
+						<div class="accordion">
+							<div class="accordion-item">
+								<div class="accordion-item-title">
+									Перед установкой ВМС нужно сдавать анализы?
+									<img class="accordion-item-arrow" src="assets/images/arrow-right.svg" alt="icon-arrow">
+								</div>
+								<div class="accordion-item-content">
+									<div class="accordion-item-content-inner">
+										<p class="accordion-item-text">
+											По форме лучше использовать спирали с округлыми плечиками. В отличие от Т-образных, они не
+											раздражают углы матки. Используются в основном медьсодержащие или гормонопродуцирующие спирали. Их
+											эффективность по данным ВОЗ составляет соответственно 93,8% и 99,8%. Таким образом,
+											гормонопродуцирующие внутриматочные контрацептивы обеспечивают более надежную защиту от
+											нежелательной беременности, поэтому они более предпочтительны.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<div class="accordion-item-title">
+									Какой тип внутриматочной спирали выбрать?
+									<img class="accordion-item-arrow" src="assets/images/arrow-right.svg" alt="icon-arrow">
+								</div>
+								<div class="accordion-item-content">
+									<div class="accordion-item-content-inner">
+										<p class="accordion-item-text">
+											По форме лучше использовать спирали с округлыми плечиками. В отличие от Т-образных, они не
+											раздражают углы матки. Используются в основном медьсодержащие или гормонопродуцирующие спирали. Их
+											эффективность по данным ВОЗ составляет соответственно 93,8% и 99,8%. Таким образом,
+											гормонопродуцирующие внутриматочные контрацептивы обеспечивают более надежную защиту от
+											нежелательной беременности, поэтому они более предпочтительны.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<div class="accordion-item-title">
+									Можно ли поставить спираль самостоятельно?
+									<img class="accordion-item-arrow" src="assets/images/arrow-right.svg" alt="icon-arrow">
+								</div>
+								<div class="accordion-item-content">
+									<div class="accordion-item-content-inner">
+										<p class="accordion-item-text">
+											По форме лучше использовать спирали с округлыми плечиками. В отличие от Т-образных, они не
+											раздражают углы матки. Используются в основном медьсодержащие или гормонопродуцирующие спирали. Их
+											эффективность по данным ВОЗ составляет соответственно 93,8% и 99,8%. Таким образом,
+											гормонопродуцирующие внутриматочные контрацептивы обеспечивают более надежную защиту от
+											нежелательной беременности, поэтому они более предпочтительны.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<img class="popular-img-2" src="assets/images/mirena.jpg" alt="mirena">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contraindications" id="contraindications">
+			<div class="container">
+				<div class="contraindications-inner">
+					<h2 class="contraindications-title">
+						Противопоказания
+					</h2>
+					<div class="contraindications-content">
+						<h4 class="contraindications-content-ttile">
+							Установка контрацептива не проводится в следующих случаях:
+						</h4>
+						<ul class="contraindications-list list">
+							<li class="list-item">
+								 вагинальные инфекции;
+							</li>
+							<li class="list-item">
+								патологические выделения из половых путей неустановленной этиологии;
+							</li>
+							<li class="list-item">
+								беременность;
+							</li>
+							<li class="list-item">
+								воспалительные процессы в органах малого таза;
+							</li>
+							<li class="list-item">
+								патологии влагалища, матки, ее шейки, особенно это касается злокачественных опухолей;
+							</li>
+							<li class="list-item">
+								аллергическая реакция на материал спирали
+							</li>
+							<li class="list-item">
+								кровотечения неизвестной этиологии;
+							</li>
+							<li class="list-item">
+								длительные, обильные менструации.
+							</li>
+							<li class="list-item">
+								нейтральное воздействие на углеводный, жировой обмен, что важно для пациенток с ожирением
+							</li>
+							<button class="contraindications-button button" data-modal="modal-feedback">Получить консультацию</button>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="reviews" id="reviews">
+			<div class="container">
+				<div class="reviews-inner">
+					<div class="reviews-top">
+						<div class="reviews-head">
+							<h2 class="reviews-title">
+								Что говорят клиенты?
+							</h2>
+							<div class="swiper-nav">
+								<div class="swiper-button swiper-button-prev">
+									<svg class="swiper-button-icon">
+										<use xlink:href="assets/images/icons/icons.svg#arro-left"></use>
+									</svg>
+								</div>
+								<div class="swiper-pagination"></div>
+								<div class="swiper-button swiper-button-next">
+									<svg class="swiper-button-icon">
+										<use xlink:href="assets/images/icons/icons.svg#arro-right"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide review-card">
+									<p class="review-card-text">
+										Замечательное место, очень вежливый персонал, всё чисто, современное оборудование и интерьер.
+										Удобное расположение в центре города, можно добираться и на собственном транспорте, ведь парковка
+										для пациентов имеется. Была у главного врача, всё понравилось, дала рекомендации по уходу, ответила
+										на все вопросы, составили план лечения, отличный специалист своего дела. Рекомендую для посещения
+										данную клинику и врача Дубскую Марию Акимовну!
+									</p>
+									<button class="review-card-button">ПРОВЕРИТЬ ОТЗЫВ</button>
+								</div>
+								<div class="swiper-slide review-card">
+									<p class="review-card-text">
+										Замечательное место, очень вежливый персонал, всё чисто, современное оборудование и интерьер.
+										Удобное расположение в центре города, можно добираться и на собственном транспорте, ведь парковка
+										для пациентов имеется. Была у главного врача, всё понравилось, дала рекомендации по уходу, ответила
+										на все вопросы, составили план лечения, отличный специалист своего дела. Рекомендую для посещения
+										данную клинику и врача Дубскую Марию Акимовну!
+									</p>
+									<button class="review-card-button">ПРОВЕРИТЬ ОТЗЫВ</button>
+								</div>
+								<div class="swiper-slide review-card">
+									<p class="review-card-text">
+										Замечательное место, очень вежливый персонал, всё чисто, современное оборудование и интерьер.
+										Удобное расположение в центре города, можно добираться и на собственном транспорте, ведь парковка
+										для пациентов имеется. Была у главного врача, всё понравилось, дала рекомендации по уходу, ответила
+										на все вопросы, составили план лечения, отличный специалист своего дела. Рекомендую для посещения
+										данную клинику и врача Дубскую Марию Акимовну!
+									</p>
+									<button class="review-card-button">ПРОВЕРИТЬ ОТЗЫВ</button>
+								</div>
+							</div>
+						</div>
+						<a class="reviews-button button" href="https://vk.com/имяПользователя" target="_blank">
+							Смотреть все отзывы в VK
+						</a>
+					</div>
+					<div class="reviews-bottom">
+						<div class="reviews-bottom-title">
+							Отзывы на независимых площадках
+						</div>
+						<div class="playgrounds">
+							<a href="#" target="_blank"><img class="playgrounds-item" src="assets/images/yandex.png" /></a>
+							<a href="#" target="_blank"><img class="playgrounds-item" src="assets/images/avito.png" /></a>
+							<a href="#" target="_blank"><img class="playgrounds-item" src="assets/images/gis.png" /></a>
+							<a href="#" target="_blank"><img class="playgrounds-item" src="assets/images/google.png" /></a>
+							<a href="#" target="_blank"><img class="playgrounds-item" src="assets/images/lamp.png" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="employees" id="employees">
+			<div class="container">
+				<div class="employees-inner">
+					<h2 class="employees-title">
+						Кто проводит процедуру?
+					</h2>
+					<div class="employees-items swiper">
+						<div class="swiper-wrapper">
+							<div class="employees-item swiper-slide">
+								<div class="employees-item-head">
+									<img class="employees-item-img" src="assets/images/employes-1.jpg" alt="">
+								</div>
+								<div class="employees-item-body">
+									<h4 class="employees-item-name highlight">Дубская Мария Акимовна</h4>
+									<p class="employees-item-descr">
+										Главный врач клиники. Эндокринолог, диетолог. Стаж 12 лет. Врач специализируется в области
+										профилактики, диагностики и лечения различных эндокринных заболеваний
+									</p>
+								</div>
+							</div>
+							<div class="employees-item swiper-slide">
+								<div class="employees-item-head">
+									<img class="employees-item-img" src="assets/images/employes-2.jpg" alt="">
+								</div>
+								<div class="employees-item-body">
+									<h4 class="employees-item-name highlight">Калашников Даниил Сергеев</h4>
+									<p class="employees-item-descr">
+										Сертифицированный специалист с высшим медицинским образованием, с опытом работы в сфере красоты и
+										здоровья. Опыт работы 3 года.
+									</p>
+								</div>
+							</div>
+							<div class="employees-item swiper-slide">
+								<div class="employees-item-head">
+									<img class="employees-item-img" src="assets/images/employes-3.jpg" alt="">
+								</div>
+								<div class="employees-item-body">
+									<h4 class="employees-item-name highlight">Менжинская Руслана</h4>
+									<p class="employees-item-descr">
+										Лечение акне. Эстетическая косметология. Инъекционная косметология. Аппаратная косметология: СМАС-
+										лифтинг. Опыт работы 3 года.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-nav">
+						<div class="swiper-button swiper-button-prev">
+							<svg class="swiper-button-icon">
+								<use xlink:href="assets/images/icons/icons.svg#arro-left"></use>
+							</svg>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button swiper-button-next">
+							<svg class="swiper-button-icon">
+								<use xlink:href="assets/images/icons/icons.svg#arro-right"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="location" id="location">
+			<div class="container">
+				<div class="location-inner">
+					<h2 class="location-title">
+						Где мы находимся?
+					</h2>
+					<div class="map">
+						<iframe
+							src="https://yandex.ru/map-widget/v1/?um=constructor%3A6903d791474929e8c5c06d18d0a7cfdd58f64380a43ae18d5900e8c457ff6f8d&amp;source=constructor"
+							width="100%" height="400" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="preparation">
+			<div class="container">
+				<div class="preparation-inner">
+					<div class="preparation-col">
+						<h2 class="preparation-title">
+							Подготовка к установке
+						</h2>
+						<div class="preparation-subtitle">
+							Перед введением пациентка должна пройти осмотр у врача-гинеколога и ряд диагностических процедур
+						</div>
+						<ul class="advantage-bmc-list list">
+							<li class="advantage-bmc-item list-item">
+								влагалищное исследование;
+							</li>
+							<li class="advantage-bmc-item list-item">
+								УЗИ органов малого таза;
+							</li>
+							<li class="advantage-bmc-item list-item">
+								расширенную кольпоскопию (при необходимости);
+							</li>
+							<li class="advantage-bmc-item list-item">
+								мазок на инфекции передающиеся половым путем;
+							</li>
+							<li class="advantage-bmc-item list-item">
+								общий, биохимический анализы крови
+							</li>
+							<li class="advantage-bmc-item list-item">
+								мазок на микрофлору
+							</li>
+						</ul>
+					</div>
+					<div class="preparation-col">
+						<div class="preparation-text">
+							<p>
+								До установки должны быть пролечены все воспалительные гинекологические заболевания. За несколько дней до
+								процедуры нужно исключить половые контакты, не вводить свечи, не делать спринцевания.
+								Спираль устанавливают в первую неделю менструального цикла, преимущественно с 4-й по 7-й дни, так как в
+								этот период приоткрыт канал шейки матки. Если манипуляция приходится на другие дни цикла, необходимо
+								предварительно исключить беременность.
+							</p>
+
+							<p>Устанавливать ВМС можно сразу после аборта, пока женщина под анестезией. После выкидыша процедура
+								проводится не раньше чем через неделю, после естественных родов – через 6 недель (при условии, что нет
+								осложнений), после кесарево через полгода.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="recommendations">
+				<div class="container">
+					<div class="recommendations-inner">
+						<h2 class="recommendations-title">
+							Рекомендации после установки
+						</h2>
+						<div class="recommendations-text">
+							<p>
+								После введения ВМС стоит отказаться от половых контактов, спринцеваний на 5 дней, не пользоваться
+								тампонами в первый менструальный цикл. После установки врач назначает контрольный прием через неделю,
+								далее через 3 месяца. Рекомендовано пройти УЗИ, чтобы убедиться в правильной фиксации изделия. В
+								дальнейшем консультация врача со сдачей мазков, контрольными УЗИ необходима 2 раза в год.
+							</p>
+							<p>
+								В первые дни может беспокоить боль внизу живота, которая легко устраняется приемом обезболивающих.
+								Возможны кровянистые выделения, они исчезают самостоятельно в течение недели. При появлении
+								кровотечения, выраженной боли, выпадении спирали, повышении температуры необходимо сразу обратиться к
+								врачу.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="choose" id="choose">
+			<div class="container">
+				<div class="choose-inner">
+					<h2 class="choose-title">Не знаете что выбрать?</h2>
+					<div class="choose-subtitle">Оставьте заявку и мы свяжемся с вами!</div>
+					<form class="choose-form form">
+						<div class="field">
+							<input class="input required" type="text" name="fullname" placeholder="Иван Иванов" />
+						</div>
+						<div class="field">
+							<input class="input required input-phone" type="tel" name="phone" placeholder="+7 (900) 123-45-67" />
+						</div>
+						<div class="field combobox">
+							<input class="input combobox-input" type="text" name="filller" placeholder="Выберите вид филера"
+								readonly />
+							<ul class="combobox-list">
+								<li class="combobox-item">Belotero Balance</li>
+								<li class="combobox-item">Belotero Intense</li>
+								<li class="combobox-item">Belotero Lips Shape</li>
+								<li class="combobox-item">Juvederm Ultra Smile</li>
+								<li class="combobox-item">Juvederm Ultra 3</li>
+								<li class="combobox-item">Stylage Lips</li>
+							</ul>
+							<img class="combobox-icon" src="assets/images/arrow-bottom.svg" alt="" />
+						</div>
+						<div class="field combobox">
+							<input class="input combobox-input date-picker" type="text" name="date" placeholder="Выберите вид филера"
+								readonly />
+							<img class="combobox-icon" src="assets/images/arrow-bottom.svg" alt="" />
+						</div>
+						<button class="choose-form-button button">Отправить заявку</button>
+						<div class="choose-form-warning">
+							Нажимая кнопку “Отправить заявку”, Вы даете согласие на обработку Ваших персональных данных
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="footer-top-inner">
+					<img class="footer-img" src="assets/images/footer-img.jpg" alt="" />
+					<div class="footer-top-content">
+						<h2 class="footer-logo">Vogue Clinic</h2>
+						<div class="footer-contacts contacts">
+							<div class="contacts-list">
+								<a class="contacts-item contacts-link" href="tel:+73452606698"> +7 (3452) 60-66-98 </a>
+								<a class="contacts-item contacts-link" href="tel:+79292696698"> +7 (929) 269-66-98 </a>
+							</div>
+							<div class="contacts-list">
+								<div class="contacts-item">
+									<svg class="contacts-link-icon">
+										<use xlink:href="assets/images/icons/icons.svg#clock"></use>
+									</svg>
+									Ежедневно 9.00-20.00
+								</div>
+								<div class="contacts-item">
+									<svg class="contacts-link-icon">
+										<use xlink:href="assets/images/icons/icons.svg#pin"></use>
+									</svg>
+									Невский проспект, 19
+								</div>
+							</div>
+						</div>
+						<div class="footer-socials socials">
+							<a class="socials-link" href="https://wa.me/номерБезПлюса" target="_blank">
+								<img class="socials-icon" src="assets/images/whatsapp.svg" alt="whatsapp" />
+							</a>
+							<a class="socials-link" href="https://t.me/имяПользователя" target="_blank">
+								<img class="socials-icon" src="assets/images/telegram.svg" alt="telegram" />
+							</a>
+							<a class="socials-link" href="https://vk.com/имяПользователя" target="_blank">
+								<img class="socials-icon" src="assets/images/vk.svg" alt="vk" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="footer-bottom-inner">
+					<ul class="privacy-policy">
+						<li class="privacy-policy-item">
+							<a class="privacy-policy-link underline" href="#">Обработка персональных данных</a>
+						</li>
+						<li class="privacy-policy-item">
+							<a class="privacy-policy-link underline" href="#">Политика конфиденциальности</a>
+						</li>
+					</ul>
+					<div class="company-info">ИП Сляндева Ольга Ивановна ОГРН 1226100010289 ИНН 6168116782</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal" id="modal-feedback">
+		<div class="modal-container">
+			<div class="modal-close-button" data-modal-close>
+				<svg class="icons-group-icon">
+					<use xlink:href="assets/images/icons/icons.svg#x"></use>
+				</svg>
+			</div>
+			<div class="modal-title">
+				Заполните форму
+			</div>
+			<div class="modal-subtitle">
+				Оставьте заявку и мы свяжемся с вами!
+			</div>
+			<form class="modal-form form">
+				<div class="field">
+					<input class="input required" type="text" name="fullname" placeholder="Иван Иванов" />
+				</div>
+				<div class="field combobox">
+					<input class="input combobox-input" type="text" name="iv" placeholder="Выберите тип капельницы" readonly />
+					<ul class="combobox-list">
+						<li class="combobox-item">Тип 1</li>
+						<li class="combobox-item">Тип 2</li>
+						<li class="combobox-item">Тип 3</li>
+					</ul>
+					<img class="combobox-icon" src="assets/images/arrow-bottom.svg" alt="" />
+				</div>
+				<div class="field">
+					<input class="input required input-phone" type="tel" name="phone" placeholder="+7 (900) 123-45-67" />
+				</div>
+				<div class="field">
+					<input class="input" type="text" name="fullname" placeholder="Выезд на дом" />
+				</div>
+				<button class="modal-form-button button">Отправить заявку</button>
+				<div class="modal-form-warning">
+					Нажимая кнопку “Отправить заявку”, Вы даете согласие на обработку Ваших персональных данных
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/imask"></script>
+	<script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.3.5/air-datepicker.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>
