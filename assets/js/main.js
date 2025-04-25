@@ -104,6 +104,7 @@ combobox()
 
 new AirDatepicker('.date-picker', {
 	isMobile: window.innerWidth <= 575 && true,
+	minDate: new Date()
 })
 
 const forms = document.querySelectorAll('.form')
@@ -184,11 +185,12 @@ const phoneInputs = document.querySelectorAll('.input-phone')
 phoneInputs.forEach(phoneInput => {
 	VMasker(phoneInput).maskPattern("+9 (999) 999-99-99")
 
-	phoneInput.addEventListener('input', () => {
-		if (phoneInput.value.length === 1) {
-			phoneInput.value = '+7'
+	phoneInput.addEventListener("focus", () => {
+		// Подставляем +7 только если поле пустое
+		if (phoneInput.value.trim() === '') {
+			phoneInput.value = "+7 "
 		}
-	})
+	});
 
 })
 
