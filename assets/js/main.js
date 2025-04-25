@@ -179,12 +179,18 @@ forms.forEach(form => {
 	})
 })
 
-IMask(
-	document.querySelector('.input-phone'),
-	{
-		mask: '+{7}(000)000-00-00'
-	}
-)
+const phoneInputs = document.querySelectorAll('.input-phone')
+
+phoneInputs.forEach(phoneInput => {
+	IMask(
+		phoneInput,
+		{
+			mask: '+{7}(000)000-00-00'
+		}
+	)
+})
+
+
 
 const accordion = () => {
 	const parentEls = document.querySelectorAll('.accordion')
