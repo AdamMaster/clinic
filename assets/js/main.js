@@ -182,13 +182,16 @@ forms.forEach(form => {
 const phoneInputs = document.querySelectorAll('.input-phone')
 
 phoneInputs.forEach(phoneInput => {
-	IMask(
-		phoneInput,
-		{
-			mask: '+{7}(000)000-00-00'
+	VMasker(phoneInput).maskPattern("+9 (999) 999-99-99")
+
+	phoneInput.addEventListener('input', () => {
+		if (phoneInput.value.length === 1) {
+			phoneInput.value = '+7'
 		}
-	)
+	})
+
 })
+
 
 
 
